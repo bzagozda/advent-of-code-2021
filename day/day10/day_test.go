@@ -39,7 +39,7 @@ func TestDay2Part2(t *testing.T) {
 		"<{([([[(<>()){}]>(<<{{",
 		"<{([{{}}[<[[[<>{}]]]>[]]",
 	}
-	expected := 26397
+	expected := 288957
 
 	day := &Day10{}
 	result := day.Part2(input)

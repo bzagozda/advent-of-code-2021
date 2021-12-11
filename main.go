@@ -5,6 +5,7 @@ import (
 
 	"github.com/bzagozda/aoc2021/day"
 	"github.com/bzagozda/aoc2021/day/day1"
+	"github.com/bzagozda/aoc2021/day/day10"
 	"github.com/bzagozda/aoc2021/day/day2"
 	"github.com/bzagozda/aoc2021/day/day3"
 	"github.com/bzagozda/aoc2021/day/day4"
@@ -25,4 +26,5 @@ func main() {
 	log.Println(day.Run(&day7.Day7{}))
 	log.Println(day.Run(&day8.Day8{}))
 	log.Println(day.Run(&day9.Day9{}))
+	log.Println(day.Run(&day10.Day10{}))
 }
