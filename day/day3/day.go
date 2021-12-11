@@ -4,13 +4,13 @@ import (
 	"github.com/bzagozda/aoc2021/util"
 )
 
-type Day3 struct{}
+type Day struct{}
 
-func (d *Day3) Number() int {
+func (d *Day) Number() int {
 	return 3
 }
 
-func (d *Day3) Part1(input []string) (result int) {
+func (d *Day) Part1(input []string) (result int) {
 	bytesArray := util.To2DByteArray(input)
 
 	var gamma string
@@ -31,7 +31,7 @@ func (d *Day3) Part1(input []string) (result int) {
 	return util.BinaryToInt(gamma) * util.BinaryToInt(epsilon)
 }
 
-func (d *Day3) Part2(input []string) (result int) {
+func (d *Day) Part2(input []string) (result int) {
 	bytesArray := util.To2DByteArray(input)
 
 	currentBytesArray := make([][]byte, len(bytesArray))

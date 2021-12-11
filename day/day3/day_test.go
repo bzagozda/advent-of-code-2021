@@ -19,7 +19,7 @@ func TestDay2Part1(t *testing.T) {
 	}
 	expected := 198
 
-	day := &Day3{}
+	day := &Day{}
 	result := day.Part1(input)
 	if result != expected {
 		t.Errorf("Expected: %d, Got: %d", expected, result)
@@ -43,7 +43,7 @@ func TestDay2Part2(t *testing.T) {
 	}
 	expected := 230
 
-	day := &Day3{}
+	day := &Day{}
 	result := day.Part2(input)
 	if result != expected {
 		t.Errorf("Expected: %d, Got: %d", expected, result)

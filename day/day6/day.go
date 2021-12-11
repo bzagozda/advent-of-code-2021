@@ -6,14 +6,14 @@ import (
 	"github.com/bzagozda/aoc2021/util"
 )
 
-type Day6 struct{}
+type Day struct{}
 
 type MemKey struct {
 	fish int
 	days int
 }
 
-func (d *Day6) Number() int {
+func (d *Day) Number() int {
 	return 6
 }
 
@@ -35,7 +35,7 @@ func calculateFishes(fish int, days int, mem map[MemKey]int) int {
 	return fishes
 }
 
-func (d *Day6) Part1(input []string) (result int) {
+func (d *Day) Part1(input []string) (result int) {
 	initialState := util.MapToInt(strings.Split(input[0], ","))
 
 	mem := make(map[MemKey]int, 0)
@@ -47,7 +47,7 @@ func (d *Day6) Part1(input []string) (result int) {
 	return fishes
 }
 
-func (d *Day6) Part2(input []string) (result int) {
+func (d *Day) Part2(input []string) (result int) {
 	initialState := util.MapToInt(strings.Split(input[0], ","))
 
 	mem := make(map[MemKey]int, 0)

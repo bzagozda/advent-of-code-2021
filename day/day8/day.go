@@ -9,13 +9,13 @@ import (
 	"github.com/bzagozda/aoc2021/util"
 )
 
-type Day8 struct{}
+type Day struct{}
 
-func (d *Day8) Number() int {
+func (d *Day) Number() int {
 	return 8
 }
 
-func (d *Day8) Part1(input []string) (count int) {
+func (d *Day) Part1(input []string) (count int) {
 	for _, line := range input {
 		output := strings.Split(strings.Trim(strings.Split(line, "|")[1], " "), " ")
 
@@ -39,7 +39,7 @@ func findDataByNoSegments(input []string) map[int][]string {
 	return uniqueSegmented
 }
 
-func (d *Day8) Part2(input []string) (count int) {
+func (d *Day) Part2(input []string) (count int) {
 	for _, line := range input {
 		inputOutput := strings.Split(line, "|")
 

@@ -2,9 +2,9 @@ package day1
 
 import "github.com/bzagozda/aoc2021/util"
 
-type Day1 struct{}
+type Day struct{}
 
-func (d *Day1) Number() int {
+func (d *Day) Number() int {
 	return 1
 }
 
@@ -13,12 +13,12 @@ func countIncreasing(meters []int) int {
 	return util.Count(len(windows), func(i int) bool { return windows[i][0] < windows[i][1] })
 }
 
-func (d *Day1) Part1(input []string) int {
+func (d *Day) Part1(input []string) int {
 	meters := util.MapToInt(input)
 	return countIncreasing(meters)
 }
 
-func (d *Day1) Part2(input []string) int {
+func (d *Day) Part2(input []string) int {
 	meters := util.MapToInt(input)
 	windows := util.SlidingWindow(meters, 3)
 	summed := make([]int, len(windows))

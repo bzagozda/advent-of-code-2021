@@ -89,9 +89,40 @@ func To2DByteArray(input []string) (result [][]byte) {
 	return
 }
 
+func To2DRuneArray(input []string) (result [][]rune) {
+	for _, line := range input {
+		result = append(result, []rune(line))
+	}
+	return
+}
+
+func To2DIntArray(input []string) (result [][]int) {
+	for _, line := range input {
+		row := make([]int, 0)
+		for _, e := range line {
+			num := int(e - '0')
+			row = append(row, num)
+		}
+		result = append(result, row)
+	}
+	return
+}
+
 func Print2DByteArray(arr [][]byte) {
 	for _, row := range arr {
 		log.Println(string(row))
+	}
+}
+
+func Print2DRuneArray(arr [][]rune) {
+	for _, row := range arr {
+		log.Println(string(row))
+	}
+}
+
+func Print2DIntArray(arr [][]int) {
+	for _, row := range arr {
+		log.Println(row)
 	}
 }
 
@@ -143,4 +174,10 @@ func MinAndMax(array []int) (min, max int) {
 	}
 
 	return
+}
+
+func ForEach(times int, iterFunc func(i int)) {
+	for i := 0; i < times; i++ {
+		iterFunc(i)
+	}
 }

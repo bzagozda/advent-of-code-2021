@@ -8,9 +8,9 @@ import (
 	"github.com/bzagozda/aoc2021/util"
 )
 
-type Day5 struct{}
+type Day struct{}
 
-func (d *Day5) Number() int {
+func (d *Day) Number() int {
 	return 5
 }
 
@@ -55,7 +55,7 @@ func getMapSize(vents []Vent) (maxX, maxY int) {
 	return
 }
 
-func (d *Day5) Part1(input []string) (result int) {
+func (d *Day) Part1(input []string) (result int) {
 	vents := parseInput(input)
 	maxX, maxY := getMapSize(vents)
 
@@ -91,7 +91,7 @@ func (d *Day5) Part1(input []string) (result int) {
 	return dangerousSpaces
 }
 
-func (d *Day5) Part2(input []string) (result int) {
+func (d *Day) Part2(input []string) (result int) {
 	vents := parseInput(input)
 	maxX, maxY := getMapSize(vents)
 

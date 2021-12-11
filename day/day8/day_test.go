@@ -21,7 +21,7 @@ func TestDay2Part1(t *testing.T) {
 	}
 	expected := 26
 
-	day := &Day8{}
+	day := &Day{}
 	result := day.Part1(input)
 	util.Assert(t, result, expected)
 }
@@ -41,7 +41,7 @@ func TestDay2Part2(t *testing.T) {
 	}
 	expected := 61229
 
-	day := &Day8{}
+	day := &Day{}
 	result := day.Part2(input)
 	util.Assert(t, result, expected)
 }

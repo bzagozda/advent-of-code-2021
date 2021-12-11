@@ -12,7 +12,7 @@ func TestDay2Part1(t *testing.T) {
 	}
 	expected := 5934
 
-	day := &Day6{}
+	day := &Day{}
 	result := day.Part1(input)
 	util.Assert(t, result, expected)
 }
@@ -23,7 +23,7 @@ func TestDay2Part2(t *testing.T) {
 	}
 	expected := 26984457539
 
-	day := &Day6{}
+	day := &Day{}
 	result := day.Part2(input)
 	util.Assert(t, result, expected)
 }
@@ -33,7 +33,7 @@ func BenchmarkDay2Part2(b *testing.B) {
 		"3,4,3,1,2",
 	}
 
-	day := &Day6{}
+	day := &Day{}
 
 	for n := 0; n < b.N; n++ {
 		day.Part2(input)

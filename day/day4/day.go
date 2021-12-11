@@ -4,13 +4,13 @@ import (
 	"github.com/bzagozda/aoc2021/util"
 )
 
-type Day4 struct{}
+type Day struct{}
 
-func (d *Day4) Number() int {
+func (d *Day) Number() int {
 	return 4
 }
 
-func (d *Day4) Part1(input []string) (result int) {
+func (d *Day) Part1(input []string) (result int) {
 	bingoInput := parseInput(input)
 
 	for _, draw := range bingoInput.choices {
@@ -31,7 +31,7 @@ func (d *Day4) Part1(input []string) (result int) {
 	return
 }
 
-func (d *Day4) Part2(input []string) (result int) {
+func (d *Day) Part2(input []string) (result int) {
 	bingoInput := parseInput(input)
 
 	boardWin := make([]bool, len(bingoInput.boards))

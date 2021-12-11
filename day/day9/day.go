@@ -9,13 +9,13 @@ import (
 	"github.com/bzagozda/aoc2021/util"
 )
 
-type Day9 struct{}
+type Day struct{}
 
-func (d *Day9) Number() int {
+func (d *Day) Number() int {
 	return 9
 }
 
-func (d *Day9) Part1(input []string) (result int) {
+func (d *Day) Part1(input []string) (result int) {
 	heightMap := util.To2DByteArray(input)
 	util.Iter2D(heightMap, func(y, x int, el byte) {
 		neighbors, _ := getNeighbors(heightMap, y, x)
@@ -56,7 +56,7 @@ func getBasinSize(heightMap *[][]byte, y, x int) (basinSize int) {
 	return
 }
 
-func (d *Day9) Part2(input []string) int {
+func (d *Day) Part2(input []string) int {
 	heightMap := util.To2DByteArray(input)
 	basins := make([]int, 0)
 

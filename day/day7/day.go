@@ -6,13 +6,13 @@ import (
 	"github.com/bzagozda/aoc2021/util"
 )
 
-type Day7 struct{}
+type Day struct{}
 
-func (d *Day7) Number() int {
+func (d *Day) Number() int {
 	return 7
 }
 
-func (d *Day7) Part1(input []string) int {
+func (d *Day) Part1(input []string) int {
 	positions := util.StringToIntArray(input[0])
 	fuelUsageCalcFunc := func(pos1, pos2 int) int {
 		return int(math.Abs(float64(pos1) - float64(pos2)))
@@ -20,7 +20,7 @@ func (d *Day7) Part1(input []string) int {
 	return getMinFuel(positions, fuelUsageCalcFunc)
 }
 
-func (d *Day7) Part2(input []string) int {
+func (d *Day) Part2(input []string) int {
 	positions := util.StringToIntArray(input[0])
 	fuelUsageCalcFunc := func(pos1, pos2 int) int {
 		diff := math.Abs(float64(pos1) - float64(pos2))

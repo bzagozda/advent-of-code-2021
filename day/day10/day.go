@@ -6,7 +6,7 @@ import (
 	"sort"
 )
 
-type Day10 struct{}
+type Day struct{}
 
 var (
 	scoring map[rune]int = map[rune]int{
@@ -57,7 +57,7 @@ func (s *Stack) Pop() (rune, error) {
 	return char, nil
 }
 
-func (d *Day10) Number() int {
+func (d *Day) Number() int {
 	return 10
 }
 
@@ -97,7 +97,7 @@ func calculateScore(text []rune) (scoreSum int) {
 	return
 }
 
-func (d *Day10) Part1(input []string) (result int) {
+func (d *Day) Part1(input []string) (result int) {
 	illegalCharacters := make([]rune, 0)
 	for _, line := range input {
 		if char, found := findIllegalChar([]rune(line)); found {
@@ -143,7 +143,7 @@ func calculateStackScore(s *Stack) (scoreSum int) {
 	return
 }
 
-func (d *Day10) Part2(input []string) (result int) {
+func (d *Day) Part2(input []string) (result int) {
 	scores := make([]int, 0)
 	for _, line := range input {
 		if _, found := findIllegalChar([]rune(line)); !found {
